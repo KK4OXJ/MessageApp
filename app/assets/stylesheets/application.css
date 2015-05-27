@@ -18,3 +18,23 @@ body {
   font-family: sans-serif;
   cursor: default;
 }
+
+label {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+
+textarea, input, .btn {
+  padding: 10px;
+  border: 1px solid lightgray;
+  font-family: sans-serif;
+}
+
+textarea:focus, input:focus, .btn:focus {
+  border: 1px solid #39A0ED;
+  box-shadow: 0;
+  outline: none;
+}

@@ -1,10 +1,13 @@
 MessageApp::Application.routes.draw do
   
+  root 'users#new'
+  get '/login' => 'sessions#new'
+  
   resources :messages
-#  resources :users
-  get 'signup' => 'users#new'
-  resources :users, only: [:new, :create, :destroy]
-#  get '/users/new' => 'users#new'
+  get 'signup'  => 'users#new' 
+  resources :users
+#  get 'signup' => 'users#new'
+#  resources :users, only: [:new, :create, :destroy]S
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,11 +1,7 @@
-<%= form_for (@user) do |f| %>
-  <%= f.label "Username:", :for => 'username' %>
+<%= form_for(@user) do |f| %>
+  <%= f.text_field :username, :placeholder => "Username", :autofocus => 'true', :autocomplete => 'off', :required => 'true' %>
+  <%= f.password_field :password, :placeholder => "Password", :required => 'true' %>
+  <%= f.password_field :password_confirmation, :placeholder => "Password, again", :required => 'true' %>
   <br>
-  <%= f.text_field :username, :id => 'username', :autofocus => 'true' %>
-  <br>
-  <%= f.label "Password:", :for => 'password' %>
-  <br>
-  <%= f.password_field :password, :id => 'password' %>
-  <br>
-  <%= f.submit "Register!", :class => 'button' %>
+  <%= f.submit "Create an account", :class => "btn" %>
 <% end %>

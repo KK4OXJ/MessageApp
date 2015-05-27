@@ -48,28 +48,11 @@ form {
   @include centerer;
 }
 
-label {
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-       -o-user-select: none;
-          user-select: none;
-}
-
 textarea {
   width: 340px;
   max-height: 200px;
   height: 30px;
-  padding: 8px;
-  border: 1px solid lightgray;
-  font-family: sans-serif;
   resize: vertical;
-  
-  &:focus {
-    border: 1px solid #39A0ED;
-    box-shadow: 0;
-    outline: none;
-  }
 }
 
 .link-back, .link-back:hover {
@@ -87,27 +70,28 @@ small {
   font-style: italic;
 }
 
-.button {
+.btn {
   background-color: #13C4A3;
   color: white;
   padding: 10px;
-  border: 0;
+  border: 1px solid #13C4A3;
   outline: 0;
   box-shadow: none;
+  box-sizing: border-box;
   cursor: pointer;
   
-  &:hover {
+  &:hover, &:focus {
     background-color: #02B392;
   }
 }
 
-a, .button {
+a, .btn {
   color: white;
   text-decoration: none;
   
-  &:hover {
+  &:hover, &:focus {
     text-decoration: underline;
-    text-decoration-color: #E18728;
+//    text-decoration-color: white;
   }
 }
 
