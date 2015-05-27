@@ -1,0 +1,11 @@
+<%= link_to '〈', messages_path, :class => 'link-back' %>
+
+<div class="form-container">
+  <%= form_for(@message) do |f| %>
+    <%= f.label "Write your Message:", :for => 'message' %>
+    <br>
+    <%= f.text_area :content, :id => 'message', :autofocus => 'true' %> 
+    <br>
+    <%= f.submit "Create", :class => 'button' %> 
+  <% end %>
+</div>

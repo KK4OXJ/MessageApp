@@ -1,0 +1,11 @@
+<%= form_for (@user) do |f| %>
+  <%= f.label "Username:", :for => 'username' %>
+  <br>
+  <%= f.text_field :username, :id => 'username', :autofocus => 'true' %>
+  <br>
+  <%= f.label "Password:", :for => 'password' %>
+  <br>
+  <%= f.password_field :password, :id => 'password' %>
+  <br>
+  <%= f.submit "Register!", :class => 'button' %>
+<% end %>

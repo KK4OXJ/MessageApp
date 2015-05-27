@@ -1,0 +1,125 @@
+// Place all the styles related to the Messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin centerer() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body {
+  background-color: #F6F6F6;
+}
+
+.message {
+  box-sizing: border-box;
+  width: 335px;
+  background-color: #2890ED;
+  color: white;
+  padding: 40px;
+  margin: 40px auto;
+  overflow: hidden;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+}
+
+.message-content {
+  white-space: pre-line;
+}
+
+.current-message-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.current-message {
+  @extend .message;
+  @include centerer;
+  
+  margin: 0;
+}
+
+form {
+  @include centerer;
+}
+
+label {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+
+textarea {
+  width: 340px;
+  max-height: 200px;
+  height: 30px;
+  padding: 8px;
+  border: 1px solid lightgray;
+  font-family: sans-serif;
+  resize: vertical;
+  
+  &:focus {
+    border: 1px solid #39A0ED;
+    box-shadow: 0;
+    outline: none;
+  }
+}
+
+.link-back, .link-back:hover {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: black;
+  font-size: 24px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+small {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.button {
+  background-color: #13C4A3;
+  color: white;
+  padding: 10px;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: #02B392;
+  }
+}
+
+a, .button {
+  color: white;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: #E18728;
+  }
+}
+
+.new-message {
+  box-sizing: border-box;
+  display: block;
+  width: 335px;
+  padding: 20px 40px;
+  margin: 0 auto 40px;
+  text-align: center;
+  
+  &:nth-child(1) {
+    margin: 40px auto 0;
+  }
+}

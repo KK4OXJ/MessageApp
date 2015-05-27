@@ -1,0 +1,13 @@
+<%= link_to 'New Message', new_message_path, :class => 'new-message button' %>
+ 
+ <div class="messages-container">
+  <% @messages.reverse.each do |message| %>
+    <div class="message">
+      <span class="message-content"><%= message.content %></span>
+      <br><br>
+      <small>Created at <%= link_to message.created_at, message_path(message) %></small>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Message', new_message_path, :class => 'new-message button' %>
