@@ -7,6 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <% if current_user %>
+      <small class="session-status">You are currently logged in as <%= @current_user.username %>. <%= link_to "Log out?", logout_path, method: "delete" %></small>
+    <% else %>
+      <small class="session-status">You are currently logged out. Please <%= link_to "Log in", 'login' %> or <%= link_to "Sign up", 'signup' %></small>
+    <% end %>
+  </header>
 
 <%= yield %>
 

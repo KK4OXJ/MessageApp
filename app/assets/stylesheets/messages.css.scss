@@ -32,11 +32,6 @@ body {
   white-space: pre-line;
 }
 
-.current-message-container {
-  width: 100vw;
-  height: 100vh;
-}
-
 .current-message {
   @extend .message;
   @include centerer;
@@ -91,7 +86,6 @@ a, .btn {
   
   &:hover, &:focus {
     text-decoration: underline;
-//    text-decoration-color: white;
   }
 }
 

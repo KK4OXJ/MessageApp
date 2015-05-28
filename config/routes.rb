@@ -1,10 +1,11 @@
 MessageApp::Application.routes.draw do
   
   root 'users#new'
-  get '/login' => 'sessions#new'
-  
-  resources :messages
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
   get 'signup'  => 'users#new' 
+  resources :messages
   resources :users
 #  get 'signup' => 'users#new'
 #  resources :users, only: [:new, :create, :destroy]S
